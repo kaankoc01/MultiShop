@@ -11,16 +11,16 @@ namespace MultiShop.Catalog.Mapping
     {
         public GeneralMapping()
         {
-            // mapleme : entitylerimizden newlemek yerine enititylerimizin propertylerini dto ların propertylerine eşlicek.
+            // mapleme : entitylerimizden newlemek yerine entitylerimizin propertylerini dto ların propertylerine eşlicek.
             CreateMap<Category, ResultCategoryDto>().ReverseMap();
             CreateMap<Category, CreateCategoryDto>().ReverseMap();
             CreateMap<Category, UpdateCategoryDto>().ReverseMap();
             CreateMap<Category, GetByIdCategoryDto>().ReverseMap();
 
-            CreateMap<Product,ResultProductDto>().ReverseMap();
-            CreateMap<Product,CreateProductDto>().ReverseMap();
-            CreateMap<Product,UpdateProductDto>().ReverseMap();
-            CreateMap<Product,GetByIdProductDto>().ReverseMap();
+            CreateMap<Product, ResultProductDto>().ReverseMap();
+            CreateMap<Product, CreateProductDto>().ReverseMap();
+            CreateMap<Product, UpdateProductDto>().ReverseMap();
+            CreateMap<Product, GetByIdProductDto>().ReverseMap();
 
             CreateMap<ProductDetail, ResultProductDetailDto>().ReverseMap();
             CreateMap<ProductDetail, CreateProductDetailDto>().ReverseMap();
