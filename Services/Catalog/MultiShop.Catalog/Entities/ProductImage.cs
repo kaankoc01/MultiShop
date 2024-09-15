@@ -3,6 +3,7 @@ using MongoDB.Bson;
 
 namespace MultiShop.Catalog.Entities
 {
+    [BsonIgnoreExtraElements]
     public class ProductImage
     {
         [BsonId]
