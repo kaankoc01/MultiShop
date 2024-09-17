@@ -2,7 +2,6 @@
 using MongoDB.Bson;
 namespace MultiShop.Catalog.Entities
 {
-    [BsonIgnoreExtraElements]
     public class Product
     {
         [BsonId]
@@ -13,7 +12,7 @@ namespace MultiShop.Catalog.Entities
         public string ProductImageUrl { get; set; }
         public string ProductDescription { get; set; }
 
-        [BsonRepresentation(BsonType.ObjectId)]
+       // [BsonRepresentation(BsonType.ObjectId)]
         public string CategoryId { get; set; }
         [BsonIgnore]
         public Category Category { get; set; }
