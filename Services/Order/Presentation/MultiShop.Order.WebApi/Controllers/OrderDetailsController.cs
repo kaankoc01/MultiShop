@@ -12,11 +12,11 @@ namespace MultiShop.Order.WebApi.Controllers
     {
         private readonly GetOrderDetailQueryHandler _getOrderDetailQueryHandler;
         private readonly GetOrderDetailByIdQueryHandler _getOrderDetailByIdQueryHandler;
-        private readonly CreateOrderCommandHandler _createOrderCommandHandler;
+        private readonly CreateOrderDetailCommandHandler _createOrderCommandHandler;
         private readonly RemoveOrderDetailCommandHandler _removeOrderDetailCommandHandler;
         private readonly UpdateOrderDetailCommandHandler _updateOrderDetailCommandHandler;
 
-        public OrderDetailsController(GetOrderDetailQueryHandler getOrderDetailQueryHandler, GetOrderDetailByIdQueryHandler getOrderDetailByIdQueryHandler, CreateOrderCommandHandler createOrderCommandHandler, RemoveOrderDetailCommandHandler removeOrderDetailCommandHandler, UpdateOrderDetailCommandHandler updateOrderDetailCommandHandler)
+        public OrderDetailsController(GetOrderDetailQueryHandler getOrderDetailQueryHandler, GetOrderDetailByIdQueryHandler getOrderDetailByIdQueryHandler, CreateOrderDetailCommandHandler createOrderCommandHandler, RemoveOrderDetailCommandHandler removeOrderDetailCommandHandler, UpdateOrderDetailCommandHandler updateOrderDetailCommandHandler)
         {
             _getOrderDetailQueryHandler = getOrderDetailQueryHandler;
             _getOrderDetailByIdQueryHandler = getOrderDetailByIdQueryHandler;
