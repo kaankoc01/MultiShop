@@ -1,5 +1,6 @@
-﻿namespace MultiShop.Catalog.Dtos.ProductImageDtos
+﻿namespace MultiShop.DtoLayer.CatalogDtos.ProductImageDtos
 {
+
     public class GetByIdProductImageDto
     {
         public string ProductImageId { get; set; }
