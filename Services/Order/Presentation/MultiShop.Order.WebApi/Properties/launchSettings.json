@@ -2,7 +2,6 @@
   "profiles": {
     "MultiShop.Order.WebApi": {
       "commandName": "Project",
-      "launchBrowser": false,
       "launchUrl": "swagger",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
@@ -34,8 +33,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:2495",
-      "sslPort": 44360
+      "applicationUrl": "http://localhost:49905/",
+      "sslPort": 44378
     }
   }
 }
