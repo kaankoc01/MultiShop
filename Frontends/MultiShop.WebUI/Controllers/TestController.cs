@@ -4,19 +4,18 @@ using Newtonsoft.Json;
 using System.Net.Http.Headers;
 using System.Text.Json.Nodes;
 
-namespace MultiShop.WebUI.ViewComponents.UILayoutViewComponents
+namespace MultiShop.WebUI.Controllers
 {
-    public class _NavbarUILayoutComponentPartial : ViewComponent
+    public class TestController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
 
-        public _NavbarUILayoutComponentPartial(IHttpClientFactory httpClientFactory)
+        public TestController(IHttpClientFactory httpClientFactory)
         {
             _httpClientFactory = httpClientFactory;
         }
-        public async Task<IViewComponentResult> InvokeAsync()
+        public async Task<IActionResult> Index()
         {
-
             string token = "";
             using (var httpClient = new HttpClient())
             {
@@ -47,7 +46,7 @@ namespace MultiShop.WebUI.ViewComponents.UILayoutViewComponents
 
             // IHttpClientFactory kullanarak client'ı oluşturuyoruz ve custom handler ekliyoruz.
             var client = new HttpClient(clientHandler);
-            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer",token);
 
             var responseMessage = await client.GetAsync("https://localhost:7070/api/Categories");
             if (responseMessage.IsSuccessStatusCode)
@@ -59,6 +58,9 @@ namespace MultiShop.WebUI.ViewComponents.UILayoutViewComponents
 
             return View();
         }
+        public IActionResult Deneme1()
+        {
+            return View();
+        }
     }
 }
-
