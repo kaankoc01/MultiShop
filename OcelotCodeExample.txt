@@ -1,0 +1,9 @@
+    
+
+
+  // catalog mikroservisi upstreamscheme nýn altýna gelicek
+
+  "AuthenticationOptions": {
+        "AuthenticationProviderKey": "OcelotAuthenticationScheme",
+        "AllowedScopes": [ "CatalogFullPermission" ]
+      }

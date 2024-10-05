@@ -35,6 +35,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.IdentityServer", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requirements", "Requirements", "{D9B27C5F-BA48-4B9A-855B-F3C78F12BAEC}"
 	ProjectSection(SolutionItems) = preProject
+		LoginIndex.txt = LoginIndex.txt
+		OcelotCodeExample.txt = OcelotCodeExample.txt
+		OcelotLink.txt = OcelotLink.txt
 		Portnumbers.txt = Portnumbers.txt
 	EndProjectSection
 EndProject
@@ -62,7 +65,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.DtoLayer", "Front
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Comment", "Comment", "{1F459743-1991-4AD0-9116-78F7FFF827ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.Comment", "Services\Comment\MultiShop.Comment\MultiShop.Comment.csproj", "{43C4AE7E-1A38-41E4-8F7E-AEAC981AAE24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.Comment", "Services\Comment\MultiShop.Comment\MultiShop.Comment.csproj", "{43C4AE7E-1A38-41E4-8F7E-AEAC981AAE24}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateway", "ApiGateway", "{8E472ED9-18AF-4C81-B429-C11C50F78153}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RapidApi", "RapidApi", "{93786F0A-6D7B-40D9-BBCD-98E615F183CC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.OcelotGateway", "ApiGateway\MultiShop.OcelotGateway\MultiShop.OcelotGateway.csproj", "{1D45EE53-EBF7-41B4-A6E1-7364BAB8F3B9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Payment", "Payment", "{E8E70014-989B-4277-ADF6-622AF7CB7710}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.Payment", "Services\Payment\MultiShop.Payment\MultiShop.Payment.csproj", "{A4A5B43E-E0BA-415A-90D8-AE01E77492DC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{872504BA-3380-4267-BB2B-D55DB0E7B1D7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiShop.Images", "Services\Images\MultiShop.Images\MultiShop.Images.csproj", "{B75BE29F-7AD0-491C-AEE9-7F8FF1E31C6E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -134,6 +151,18 @@ Global
 		{43C4AE7E-1A38-41E4-8F7E-AEAC981AAE24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43C4AE7E-1A38-41E4-8F7E-AEAC981AAE24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43C4AE7E-1A38-41E4-8F7E-AEAC981AAE24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D45EE53-EBF7-41B4-A6E1-7364BAB8F3B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D45EE53-EBF7-41B4-A6E1-7364BAB8F3B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D45EE53-EBF7-41B4-A6E1-7364BAB8F3B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D45EE53-EBF7-41B4-A6E1-7364BAB8F3B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4A5B43E-E0BA-415A-90D8-AE01E77492DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4A5B43E-E0BA-415A-90D8-AE01E77492DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4A5B43E-E0BA-415A-90D8-AE01E77492DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4A5B43E-E0BA-415A-90D8-AE01E77492DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B75BE29F-7AD0-491C-AEE9-7F8FF1E31C6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B75BE29F-7AD0-491C-AEE9-7F8FF1E31C6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B75BE29F-7AD0-491C-AEE9-7F8FF1E31C6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B75BE29F-7AD0-491C-AEE9-7F8FF1E31C6E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -164,6 +193,11 @@ Global
 		{0F2DC1B2-76B9-44C0-88F9-A4585C2AC36F} = {864EC882-11CE-4BFC-98F9-248E8D152644}
 		{1F459743-1991-4AD0-9116-78F7FFF827ED} = {6C703331-A9D3-44E3-B686-653EA7218A8B}
 		{43C4AE7E-1A38-41E4-8F7E-AEAC981AAE24} = {1F459743-1991-4AD0-9116-78F7FFF827ED}
+		{1D45EE53-EBF7-41B4-A6E1-7364BAB8F3B9} = {8E472ED9-18AF-4C81-B429-C11C50F78153}
+		{E8E70014-989B-4277-ADF6-622AF7CB7710} = {6C703331-A9D3-44E3-B686-653EA7218A8B}
+		{A4A5B43E-E0BA-415A-90D8-AE01E77492DC} = {E8E70014-989B-4277-ADF6-622AF7CB7710}
+		{872504BA-3380-4267-BB2B-D55DB0E7B1D7} = {6C703331-A9D3-44E3-B686-653EA7218A8B}
+		{B75BE29F-7AD0-491C-AEE9-7F8FF1E31C6E} = {872504BA-3380-4267-BB2B-D55DB0E7B1D7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F39C81DE-BCD0-45E3-BBCE-158F8DE43381}
