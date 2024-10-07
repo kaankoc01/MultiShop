@@ -18,7 +18,6 @@ namespace MultiShop.WebUI.Services.CatalogServices.FeatureSliderServices
             var responseMessage = await _httpClient.PostAsJsonAsync<CreateFeatureSliderDto>("featuresliders", createFeatureSliderDto);
 
         }
-
         public async Task DeleteFeatureSliderAsync(string id)
         {
             await _httpClient.DeleteAsync("featuresliders?id=" + id);

@@ -19,14 +19,12 @@ namespace MultiShop.WebUI.Areas.Admin.Controllers
             _httpClientFactory = httpClientFactory;
             _categoryService = categoryService;
         }
-
         [Route("Index")]
         public async Task<IActionResult> Index()
         {
             CategoryViewbagList();
             var values = await _categoryService.GetAllCategoryAsync();
             return View(values);
-
         }
         [HttpGet]
         [Route("CreateCategory")]
@@ -35,16 +33,12 @@ namespace MultiShop.WebUI.Areas.Admin.Controllers
             CategoryViewbagList();
             return View();
         }
-
-
         [HttpPost]
         [Route("CreateCategory")]
         public async Task<IActionResult> CreateCategory(CreateCategoryDto createCategoryDto)
         {
-
             await _categoryService.CreateCategoryAsync(createCategoryDto);
             return RedirectToAction("Index", "Category", new { area = "Admin" });
-
         }
         [Route("DeleteCategory/{id}")]
 
@@ -52,7 +46,6 @@ namespace MultiShop.WebUI.Areas.Admin.Controllers
         {
             await _categoryService.DeleteCategoryAsync(id);
             return RedirectToAction("Index", "Category", new { area = "Admin" });
-
         }
         [Route("UpdateCategory/{id}")]
         [HttpGet]
@@ -68,7 +61,6 @@ namespace MultiShop.WebUI.Areas.Admin.Controllers
         {
             await _categoryService.UpdateCategoryAsync(updateCategoryDto);
             return RedirectToAction("Index", "Category", new { area = "Admin" });
-
         }
         void CategoryViewbagList()
         {

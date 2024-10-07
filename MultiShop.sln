@@ -36,6 +36,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requirements", "Requirements", "{D9B27C5F-BA48-4B9A-855B-F3C78F12BAEC}"
 	ProjectSection(SolutionItems) = preProject
 		LoginIndex.txt = LoginIndex.txt
+		NavbarUI.txt = NavbarUI.txt
 		OcelotCodeExample.txt = OcelotCodeExample.txt
 		OcelotLink.txt = OcelotLink.txt
 		Portnumbers.txt = Portnumbers.txt

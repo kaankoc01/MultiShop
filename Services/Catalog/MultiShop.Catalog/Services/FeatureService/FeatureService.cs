@@ -39,10 +39,10 @@ namespace MultiShop.Catalog.Services.FeatureService
             return _mapper.Map<List<ResultFeatureDto>>(values);
         }
 
-        public async Task<GetByIdFeatureDto> GetByIdFeatureAsync(string id)
+        public async Task<UpdateFeatureDto> GetByIdFeatureAsync(string id)
         {
             var values = await _featureCollection.Find<Feature>(x => x.FeatureId == id).FirstOrDefaultAsync();
-            return _mapper.Map<GetByIdFeatureDto>(values);
+            return _mapper.Map<UpdateFeatureDto>(values);
         }
 
         public async Task UpdateFeatureAsync(UpdateFeatureDto updateFeatureDto)

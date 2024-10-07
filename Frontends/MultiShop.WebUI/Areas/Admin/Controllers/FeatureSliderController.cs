@@ -8,7 +8,6 @@ using System.Text;
 namespace MultiShop.WebUI.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [AllowAnonymous]
     [Route("Admin/FeatureSlider")]
     public class FeatureSliderController : Controller
     {
@@ -32,8 +31,6 @@ namespace MultiShop.WebUI.Areas.Admin.Controllers
             FeatureSliderViewbagList();
             return View();
         }
-
-
         [HttpPost]
         [Route("CreateFeatureSlider")]
         public async Task<IActionResult> CreateFeatureSlider(CreateFeatureSliderDto createFeatureSliderDto)
