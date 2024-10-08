@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MultiShop.DtoLayer.CatalogDtos.ContactDtos;
+using MultiShop.WebUI.Services.CatalogServices.ContactServices;
 using Newtonsoft.Json;
 using System.Text;
 
@@ -7,15 +8,18 @@ namespace MultiShop.WebUI.Controllers
 {
     public class ContactController : Controller
     {
-        private readonly IHttpClientFactory _httpClientFactory;
-
-        public ContactController(IHttpClientFactory httpClientFactory)
+        private readonly IContactService _contactService;
+        public ContactController(IContactService contactService)
         {
-            _httpClientFactory = httpClientFactory;
+            _contactService = contactService;
         }
+
         [HttpGet]
         public IActionResult Index()
         {
+            ViewBag.Directory1 = "MultiShop";
+            ViewBag.Directory2 = "İletişim";
+            ViewBag.Directory3 = "Mesaj Gönder";
             return View();
         }
         [HttpPost]
@@ -23,20 +27,9 @@ namespace MultiShop.WebUI.Controllers
         {
             createContactDto.IsRead = false;
             createContactDto.SendDate = DateTime.Now;
-            // HttpClientHandler ile SSL doğrulamasını atlıyoruz.
-            var clientHandler = new HttpClientHandler();
-            clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
+            await _contactService.CreateContactAsync(createContactDto);
+            return RedirectToAction("Index", "Default");
 
-            // IHttpClientFactory kullanarak client'ı oluşturuyoruz ve custom handler ekliyoruz.
-            var client = new HttpClient(clientHandler);
-            var jsondata = JsonConvert.SerializeObject(createContactDto); //eklerken serialize
-            StringContent stringContent = new StringContent(jsondata, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PostAsync("https://localhost:7070/api/Contacts", stringContent);
-            if (responseMessage.IsSuccessStatusCode)
-            {
-                return RedirectToAction("Index", "Default");
-            }
-            return View();
         }
     }
 }
