@@ -16,14 +16,16 @@ namespace MultiShop.WebUI.Services.BasketServices
             var values = await GetBasket();
             if (values != null) 
             {
-                if(!values.BasketItems.Any(x=> x.ProductId == basketItemDto.ProductId))
+                if(!values.BasketItems.Any(x => x.ProductId == basketItemDto.ProductId))
                 {
                     values.BasketItems.Add(basketItemDto);
                 }
                 else
                 {
-                    values = new BasketTotalDto();
-                    values.BasketItems.Add(basketItemDto);
+                    values = new BasketTotalDto
+                    {
+                        BasketItems = new List<BasketItemDto> { basketItemDto } // BasketItems'ı initialize ediyoruz
+                    };
                 }
             }
             await SaveBasket(values);
