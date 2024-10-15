@@ -45,7 +45,7 @@ namespace MultiShop.Cargo.WebApi.Controllers
                 Surname = createCargoCustomerDto.Surname,
             };
             _cargoCustomerService.TInsert(cargoCustomer);
-            return Ok("Cargo Müşteri Ekleme İşlemi Başarıyla Yapıldı");
+            return Ok("Kargo Müşteri Ekleme İşlemi Başarıyla Yapıldı");
         }
         [HttpDelete]
         public IActionResult RemoveCargoCustomer(int id)
