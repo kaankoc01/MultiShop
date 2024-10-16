@@ -43,6 +43,7 @@ namespace MultiShop.Cargo.WebApi.Controllers
                 Name = createCargoCustomerDto.Name,
                 Phone = createCargoCustomerDto.Phone,
                 Surname = createCargoCustomerDto.Surname,
+                UserCustomerId = createCargoCustomerDto.UserCustomerId,
             };
             _cargoCustomerService.TInsert(cargoCustomer);
             return Ok("Kargo Müşteri Ekleme İşlemi Başarıyla Yapıldı");
@@ -65,9 +66,16 @@ namespace MultiShop.Cargo.WebApi.Controllers
                 Name = updateCargoCustomerDto.Name,
                 Surname = updateCargoCustomerDto.Surname,
                 Phone = updateCargoCustomerDto.Phone,
+                UserCustomerId = updateCargoCustomerDto.UserCustomerId,
             };
             _cargoCustomerService.TUpdate(cargoCustomer);
             return Ok("Kargo Müşteri Güncelleme işlemi başarıyla yapıldı.");
+        }
+
+        [HttpGet("GetCargoCustomerById")]
+        public IActionResult GetCargoCustomerById(string id)
+        {
+            return Ok(_cargoCustomerService.TGetCargoCustomerById(id));
         }
     }
 }

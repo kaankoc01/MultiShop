@@ -11,11 +11,12 @@ namespace MultiShop.WebUI.Controllers
         {
             _userService = userService;
         }
-        
+
         public async Task<IActionResult> Index()
         {
             var values = await _userService.GetUserInfo();
             return View(values);
         }
+        
     }
 }
