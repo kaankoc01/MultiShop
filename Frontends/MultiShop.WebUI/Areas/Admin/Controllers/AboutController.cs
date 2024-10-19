@@ -11,6 +11,7 @@ namespace MultiShop.WebUI.Areas.Admin.Controllers
     [Route("Admin/About")]
     public class AboutController : Controller
     {
+        // IOC
         private readonly IAboutService _aboutService;
 
         public AboutController(IAboutService aboutService)
