@@ -1,21 +1,14 @@
-﻿
-namespace MultiShop.SignalRRealTimeApi.Services
+﻿namespace MultiShop.SignalRRealTimeApi.Services.SignalRMessageServices
 {
-    public class SignalRService : ISignalRService
+    public class SignalRMessageService : ISignalRMessageService
     {
-
         private readonly HttpClient _httpClient;
 
-        public SignalRService(HttpClient httpClient)
+        public SignalRMessageService(HttpClient httpClient)
         {
             _httpClient = httpClient;
         }
-        public async Task<int> GetTotalCommentCount()
-        {
-            var responseMessage = await _httpClient.GetAsync("comments/GetTotalCommentCount");
-            var values = await responseMessage.Content.ReadFromJsonAsync<int>();
-            return values;
-        }
+        
 
         public async Task<int> GetTotalMessageCountByReceiverId(string id)
         {
