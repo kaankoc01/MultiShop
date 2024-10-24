@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "cosmic-ascent-425915-r3",
+  "private_key_id": "6bb733f465e445829f2a5078057b2b5139582aca",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDIZ/QKMDAhIsiJ\nMaDkYr3Smy7EniZdQaQE2ub0PjC3TqMvjsIzgi/wt6mLORo/Zn/1+f55n4EcDaZ8\n1eNo3j5kORLAta+CsmzQq+PkHrbXkh+gz9SbEm+Y6yw5e3kKAPs+C9IOBguXb0tH\n1LqpmU8glNYdy0XSMtgqqAp2ofhQBDgFfQD3TZZIdBSpTUBpwdIRxyEXAUbviRVj\nih43jpcX3mUBPgnNcDBOMzgSoUExsoNLLijq2SldYFV49y1eqUTMrVZlPBgl7We+\nJnRdcKMgWxmozQvzQ5ZL6prJsqalxT4nJj3Yn5efpQ29BsC1ygGAJGC7aOyIc2PO\nQU2se/QLAgMBAAECggEAU5rOe9ubkI9OwrFiEjVBRJW5vovNrHUAZIgf9n/lWeuj\n92iiitOChXVRdUPmt9Fei7L13y5UMexd6tFeNDcXJz+KG7wQEsG11J4JDfdkRu1u\nZWueoezggpaFlht1JN/A8KMEyBXsiwoCiV5tWuia0phU9QwCvky40p7U8qXijhpf\nZ7bWhpb71FmHDJyMZCql0MAF43zgQnjGG7tqhtCklWT4deIBq02+fD6iuqnK8Glc\nTkqFMKr+/KpdK0VfGrDHGTCgY4w309infaP252niol4SGVrVxse49GN8lL3BM2z5\na7JEGtaw5gy75CVZDrSxgqaD9zuLn08Yu31e45KO1QKBgQDo0FJab4pMV2YVxfnt\nkQD5WwKbvq4gkqpa2uXdTt3whtxEZs4eaJHuNDkvL93FtjQMfGlr0Tjs0dlP70OV\nN6RTCGVr5yNelaeIk0r8FCaWNIC4haw4N0ViR2my+XsS5L+QP3xmVc30e5i7+0ki\n5tQBgqiQ8aVZ9ygUkKX6V0h+5wKBgQDcXWKCouvaEb0r935Kz5YPhzn88/Xy7llN\n3LJVbAdif7V8D8eUQ8KRZA3ZEGomXzMelZZ+NriPqGCg6bHZZ8XjeUrDADRmSO7x\nh+zbdux7SQpUaIteBqbsvNiTR0ia5FNC3Zr75qAR5L2ucQfXxthfRNZRM7hWerPz\nJpv5BMixPQKBgEqC+giFsF6UjlCjp0TYZtZnwWL1WSeFqU4gxvbYmgG0N+UQfiGP\nWD1Dq5WlnTX9BZWFb/wY3z40P3fs3NVyFH6arlMli9Vm0lLMyW/6RwtFzHjCF4d6\ncRNuRa8JV9GJMqJJH1hlV+BKemyXlSW9eNbu6WJSZJhxmPtT/DsuGj67AoGBAJbT\nc/FmAXeoXIoTQ2WA33yRWadAcz5q1MTuIUFGR2ercVQQmNFp72oDyVagXYcV8a8l\nQ3PvkDMDU9/PE+Nxm4guJHWDVloL4T9/gSZVJ1bajy9mvr0EYIv4VWO4joE1dad2\ndfWjzDtzDECxLGULvFy4iNfbRngqU7BA5NBz7ckhAoGAanp0VXMlvIBbsfotA6eH\nTB6FwU1kHJ4c2LwXzF6gIxmUP+htKARN8D4gl8Ols3yns68t/otpy0NXe8jSVC9S\nGWaurnGgFQ2umRkVPHxRY8/xuBN0L0CpCdBnQZC1xr6dTMfgIZJBPqNZTohkjk3H\nrl9JTqRfBIUcqhnb7H8n4Gc=\n-----END PRIVATE KEY-----\n",
+  "client_email": "mywebproject@cosmic-ascent-425915-r3.iam.gserviceaccount.com",
+  "client_id": "115291387290981974930",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/mywebproject%40cosmic-ascent-425915-r3.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

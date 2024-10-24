@@ -22,13 +22,13 @@ namespace MultiShop.RabbitMQMessageApi.Controllers
 
             channel.QueueDeclare("Kuyruk1",false,false,false,arguments:null);
 
-            var messageContent = "Merhaba bu bir rabbitmq kuyruk mesajıdır.";
+            var messageContent = "Merhaba bu bir rabbitmq kuyruk mesajidir.";
 
             var byteMessageContent = Encoding.UTF8.GetBytes(messageContent);
 
             channel.BasicPublish(exchange: "", routingKey: "Kuyruk1", basicProperties: null, body: byteMessageContent);
 
-            return Ok("Mesajınız Kuyruğa Alınmıştır.");
+            return Ok("Mesajiniz Kuyruga Alinmiştir.");
 
         }
     }
