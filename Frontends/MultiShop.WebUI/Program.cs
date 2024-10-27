@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Mvc.Razor;
 using MultiShop.WebUI.Handlers;
 using MultiShop.WebUI.Services.BasketServices;
 using MultiShop.WebUI.Services.CargoServices.CargoCompanyServices;
@@ -31,7 +32,7 @@ using MultiShop.WebUI.Settings;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddCookie(JwtBearerDefaults.AuthenticationScheme,opt =>
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddCookie(JwtBearerDefaults.AuthenticationScheme, opt =>
 {
     opt.LoginPath = "/Login/Index/";
     opt.LogoutPath = "/Login/LogOut/";
@@ -43,7 +44,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddCo
 });
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).
-    AddCookie(CookieAuthenticationDefaults.AuthenticationScheme,opt =>
+    AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, opt =>
 {
     opt.LoginPath = "/Login/Index/";
     opt.ExpireTimeSpan = TimeSpan.FromDays(5);
@@ -57,7 +58,7 @@ builder.Services.AddHttpContextAccessor();
 
 
 builder.Services.AddScoped<ILoginService, LoginService>();
-builder.Services.AddHttpClient<IIdentityService , IdentityService>();
+builder.Services.AddHttpClient<IIdentityService, IdentityService>();
 
 builder.Services.AddHttpClient();
 builder.Services.AddControllersWithViews();
@@ -68,9 +69,9 @@ builder.Services.Configure<ServiceApiSettings>(builder.Configuration.GetSection(
 builder.Services.AddScoped<ResourceOwnerPasswordTokenHandler>();
 builder.Services.AddScoped<ClientCredentialTokenHandler>();
 
-builder.Services.AddHttpClient<IClientCredentialTokenService , ClientCredentialTokenService>();
+builder.Services.AddHttpClient<IClientCredentialTokenService, ClientCredentialTokenService>();
 
-var values =builder.Configuration.GetSection("ServiceApiSettings").Get<ServiceApiSettings>();
+var values = builder.Configuration.GetSection("ServiceApiSettings").Get<ServiceApiSettings>();
 
 builder.Services.AddHttpClient<IUserService, UserService>(opt =>
 {
@@ -199,6 +200,13 @@ builder.Services.AddHttpClient<IContactService, ContactService>(opt =>
 }).AddHttpMessageHandler<ClientCredentialTokenHandler>();
 
 
+builder.Services.AddLocalization(opt =>
+{
+    opt.ResourcesPath = "Resources";
+});
+builder.Services.AddMvc().AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix).AddDataAnnotationsLocalization();
+
+
 
 var app = builder.Build();
 
@@ -216,6 +224,11 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
+
+var supportedCultures = new[] { "en", "fr", "de", "it", "tr" };
+var localizationOptions = new RequestLocalizationOptions().SetDefaultCulture(supportedCultures[4]).AddSupportedCultures(supportedCultures).AddSupportedUICultures(supportedCultures);
+
+app.UseRequestLocalization(localizationOptions);
 
 app.MapControllerRoute(
     name: "default",
